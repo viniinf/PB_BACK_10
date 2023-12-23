@@ -5,8 +5,13 @@ import br.edu.infnet.pb_back.model.Transacao;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+
+
 import java.util.Map;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class EquipamentoService {
     private static final Logger LOGGER = LoggerFactory.getLogger(EquipamentoService.class);
     private final Map<Long, Equipamento> equipamentoMap;
