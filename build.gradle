@@ -25,7 +25,8 @@ dependencies {
     //implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     //implementation 'mysql:mysql-connector-java'
     implementation 'mysql:mysql-connector-java:8.0.33'
-
+// JPA API
+    implementation 'javax.persistence:javax.persistence-api:2.2' // Use a versão apropriada
 }
 
 tasks.named('test') {
