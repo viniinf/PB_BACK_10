@@ -1,12 +1,17 @@
 package br.edu.infnet.pb_back.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
 public class Equipamento {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private String modelo;
     private String numeroSerie;
@@ -19,8 +24,7 @@ public class Equipamento {
         // Construtor padrão
     }
 
-    public Equipamento(Long id, String nome, String modelo, String numeroSerie, String descricao, double custo) {
-        this.id = id;
+    public Equipamento(String nome, String modelo, String numeroSerie, String descricao, double custo) {
         this.nome = nome;
         this.modelo = modelo;
         this.numeroSerie = numeroSerie;
